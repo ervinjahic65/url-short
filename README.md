@@ -7,6 +7,24 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## How to run project
+
+git clone https://github.com/ervinjahic65/url-short.git
+
+cd url-short
+
+composer install
+
+composer require laravel/ui
+
+import database
+
+npm install 
+
+npm run dev
+
+php artisan serve
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
