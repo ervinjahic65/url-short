@@ -6,6 +6,6 @@
 
 @section('content')
     <div id="app" class="wrapper_url_shortener">
-        <url-shortener></url-shortener>
+        <url-shortener authorized-user="{{ auth()->user()->id ?? null }}"></url-shortener>
     </div>
 @endsection
