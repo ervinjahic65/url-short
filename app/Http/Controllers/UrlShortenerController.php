@@ -39,4 +39,27 @@ class UrlShortenerController extends Controller
             dd($e);
         }
     }
+
+
+    public function handle(Request $request, $url)
+    {
+        try {
+            $uri = $_SERVER['REQUEST_URI'];
+
+            if($uri == '') {
+                return abort(404);
+            }
+
+            $url = URL::where('new_url', 'like', '%'.$uri.'%')->get(['old_url']);
+
+            if($url == '' || count($url) == 0) {
+                return abort(404);
+            } else {
+                return redirect($url[0]['old_url']);
+            }
+
+        } catch (Exception $e) {
+            dd($e);
+        }
+    }
 }

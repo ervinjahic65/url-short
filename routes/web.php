@@ -22,4 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/u/{any}', [UrlShortenerController::class, 'handle']);
+
 Route::post('url/shorten', [UrlShortenerController::class, 'store']);
