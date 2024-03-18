@@ -113,7 +113,7 @@
                         }).then(function(response) {
                             self.response = response.data;
                             $('.copyLink').fadeIn(500);
-                            $('copyLink').sibllings('.form').find('#p1').value(self.response);
+                            $('.copyLink').siblings('.form').find('#p1').val(self.response);
                             console.log(self.response);
                         });
                     }
