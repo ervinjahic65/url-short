@@ -5134,13 +5134,13 @@ __webpack_require__.r(__webpack_exports__);
         } else {
           var currentUrl = window.location.href + 'u/' + resultNewUrl;
           console.log(currentUrl);
-          /* axios.post('url/shorten', {
-              url: newUrl,
-              shortLink: currentUrl
-          }).then(function(response) {
-              self.response = response.data;
-              console.log(self.response);
-          }); */
+          axios.post('/url/shorten', {
+            url: newUrl,
+            shortlink: currentUrl
+          }).then(function (response) {
+            self.response = response.data;
+            console.log(self.response);
+          });
         }
       }
     }

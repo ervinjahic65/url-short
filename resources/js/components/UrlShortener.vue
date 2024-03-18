@@ -107,13 +107,13 @@
                     } else {
                         let currentUrl = window.location.href+'u/'+resultNewUrl;
                         console.log(currentUrl);
-                        /* axios.post('url/shorten', {
+                        axios.post('/url/shorten', {
                             url: newUrl,
-                            shortLink: currentUrl
+                            shortlink: currentUrl
                         }).then(function(response) {
                             self.response = response.data;
                             console.log(self.response);
-                        }); */
+                        });
                     }
                 }
             }
