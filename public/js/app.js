@@ -5139,10 +5139,18 @@ __webpack_require__.r(__webpack_exports__);
             shortlink: currentUrl
           }).then(function (response) {
             self.response = response.data;
+            $('.copyLink').fadeIn(500);
+            $('copyLink').sibllings('.form').find('#p1').value(self.response);
             console.log(self.response);
           });
         }
       }
+    },
+    copyContent: function copyContent() {
+      $('#p1').select();
+      this.copyTextString = 'Copied successfully!';
+      document.execCommand('copy');
+      this.url = this.response;
     }
   }
 });
